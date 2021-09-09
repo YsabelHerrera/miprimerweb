@@ -1,0 +1,204 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+   }
+   a:hover{
+    color: #343434;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.margen-interno{
+    margin: 0px 50px;
+}
+    .header{
+        background: url(imágenes/planta.2.png);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            background: rgba(0,0,0,.1);
+            display: flex;
+            /* flex-direction: row;
+            /* flex-wrap: nowrap; */ esto es lo mismo que lo de abajo */
+            flex-flow: row nowrap;
+            height: 60px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255,.5);
+            padding: 0 50px;
+        }
+            .logo{
+                flex: 1 1 auto;
+                font-size: 30px;
+                }
+                /* .logo a{
+                    color: #fff;
+                } */
+            .nav{
+                flex: 4 1 auto;
+            }
+                .nav a{
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 2px;
+                }
+            .social{
+                flex: 1 1 auto;
+                display: flex;
+            }
+                .social a{
+                    font-size: 18px;
+                    padding: 0 5px;                    
+                }
+            .texto-principal{
+                /* background: rgba(0,0,0,.1); */
+                height: 580px;
+                display: flex;
+                align-items: center;
+            }
+            h1{
+              font-family: 'lora', serif;
+              font-size: 21px;
+              font-weight: 300;
+              color: #fff;
+              text-align: center;
+              line-height: 1.6;
+
+            }
+    .section{
+        background: #fff;
+        display: flex;
+        
+    }
+        .articulos{
+            background: #f7f7f7;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        h3{
+            color: rgb(250, 246, 246);
+            font-size: 13px;
+            padding: 10px 0;
+            margin-top: -80px;
+        }
+        h2{
+            font-size: 25px;
+            text-transform: uppercase;
+            padding: 0px 0 10px 0;
+            color: #fff;
+        }
+        /* p{
+            max-width: 90%;
+        } */
+        .Leer{
+            background: rgb(12, 12, 12);
+            font-size: 13px;
+            padding: 10px;
+            margin: 10px 0px;
+            display: inline-block;
+        }
+            .article{  
+                color: #444;
+                font-size: 13px; 
+                letter-spacing: 1px;
+                margin: 10px 10px 0 0px;
+                flex: 1 1 45%;
+                background: #ececec;
+            }
+            .article img{
+                width: 100%;
+            }
+            .navegacion{
+                background: #03330d;
+                flex: 1 1 100%;
+                margin: 10px 10px 0 0px;
+            }
+            .navegacion a{
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
+                }
+        .aside{
+            /* background: #f73f52; */
+            flex: 1 1 200%;
+            margin: 10px 5px 10px 0px;
+        }
+        .aside img{
+            width: 100%;
+        }
+        h4{
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+            /* .publicidad{
+                background: #ffea85;
+
+            } */
+    .footer{
+        background:#000 ;
+        display: flex;
+        justify-content: flex-end;
+        font-family: cursive;
+        margin-top: 10px;
+    }
+        .pie{
+            /* background: #0c0c0c; */
+        }
+
+@media all and (max-width: 1120px){
+            .section{
+                flex-direction: column;
+            }
+            .menu{
+                flex-direction: column;
+                height: auto;
+            }
+            .aside{
+                display: flex;
+                justify-content: center;
+            }
+            h1{
+               font-size: 15px; 
+            }
+            .texto-principal{
+                height: 450px;
+            }
+        }
+@media all and ( max-width: 762px){
+    .articulos{
+        flex-direction: column;
+        
+    }
+}
+@media all and (max-width: 652px) {
+    .off{
+        display: none;
+    }    
+    .nav a{   font-size: 25px;}
+}
+@media all and (max-width:400px){
+    .aside{
+        flex-direction: column;
+    }
+
+}
+    
+        
