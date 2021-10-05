@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Montserrat', sans-serif;
     background: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 a{
     text-decoration: none;
@@ -22,7 +22,7 @@ a{
     margin: 0px 50px;
 }
     .header{
-        background: url(imágenes/planta.2.png);
+        background: url(imágenes/perlas.jpg);
         background-position: center;
         background-attachment: contain;
         background-size: cover;
@@ -35,15 +35,18 @@ a{
             /* flex-direction: row;
             /* flex-wrap: nowrap; */ esto es lo mismo que lo de abajo */
             flex-flow: row nowrap;
-            height: 60px;
+            /* height: 60px; */
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255,.5);
+            /* border-bottom: 1px solid rgba(255, 255, 255,.5); */
             padding: 0 50px;
         }
             .logo{
                 flex: 1 1 auto;
                 font-size: 30px;
                 }
+            .logo img{
+               height: 80px;
+            }
                 /* .logo a{
                     color: #fff;
                 } */
@@ -56,23 +59,37 @@ a{
                     padding: 0 10px;
                     letter-spacing: 2px;
                 }
+            ul{
+                list-style: none;
+            }
+            .ul1 > li{
+                 display: block;
+                 float: left;
+            }
+            .ul1 li:hover > ul{
+                display:block;
+            }
+            .ul1 li ul{
+                position: absolute;
+                display: none;
+                font-size: 25px;
+            }
             .social{
                 flex: 1 1 auto;
                 display: flex;
             }
                 .social a{
                     font-size: 18px;
-                    padding: 0 5px;                    
+                    padding: 0 5px;                  
                 }
             .texto-principal{
-                /* background: rgba(0,0,0,.1); */
-                height: 580px;
-                display: flex;
+                padding: 80px;
+                height: 250px;
                 align-items: center;
             }
             h1{
               font-family: 'lora', serif;
-              font-size: 21px;
+              font-size: 25px;
               font-weight: 300;
               color: #fff;
               text-align: center;
@@ -90,23 +107,15 @@ a{
             display: flex;
             flex-flow: row wrap;
         }
-        h3{
-            color: rgb(250, 246, 246);
-            font-size: 13px;
-            padding: 10px 0;
-            margin-top: -80px;
-        }
         h2{
             font-size: 25px;
             text-transform: uppercase;
             padding: 0px 0 10px 0;
-            color: #fff;
+            color: rgb(112, 47, 47);
+            margin-top: 10px;
         }
-        /* p{
-            max-width: 90%;
-        } */
         .Leer{
-            background: rgb(12, 12, 12);
+            background: rgb(112, 47, 47);
             font-size: 13px;
             padding: 10px;
             margin: 10px 0px;
@@ -121,10 +130,11 @@ a{
                 background: #ececec;
             }
             .article img{
-                width: 100%;
+                width: 25%;
+                flex-grow: 1 1 auto;
             }
             .navegacion{
-                background: #03330d;
+                background: rgb(112, 47, 47);
                 flex: 1 1 100%;
                 margin: 10px 10px 0 0px;
             }
@@ -143,27 +153,43 @@ a{
             width: 100%;
         }
         h4{
-            background: #000;
-            color: #fff;
+            background: rgb(112, 47, 47);
+            /* color: #fff; */
             padding: 10px;
             text-transform: uppercase;
         }
-            /* .publicidad{
-                background: #ffea85;
-
-            } */
-    .footer{
-        background:#000 ;
+        .footer{
+        background:rgb(230, 169, 202) ;
         display: flex;
         justify-content: flex-end;
         font-family: cursive;
         margin-top: 10px;
     }
-        .pie{
-            /* background: #0c0c0c; */
-        }
-
-@media all and (max-width: 1120px){
+    .nosotros-principal{
+        height: 500px; 
+        font-size: 30px;
+     }
+     .nosotros-principal h1{
+         font-size: 60px;
+     }
+     .nosotros{
+         color: #444;
+                     font-size: 25px; 
+                     letter-spacing: 1px;
+                     margin: 10px 10px 0 0px;
+                     flex: 1 1 45%;
+                     background: #df8585;
+                     margin-top: 80px;
+     }
+     .nosotros h2{
+         font-size: 35px;
+                 text-transform: uppercase;
+                 padding: 0px 0 10px 0;
+                 color: #fff;
+                 margin-top: auto;
+     }
+        
+@media all and (max-width: 900px){
             .section{
                 flex-direction: column;
             }
@@ -181,24 +207,66 @@ a{
             .texto-principal{
                 height: 450px;
             }
+            .article{
+                margin: 5px 5px 0 0;
+            }
+            .nosotros-principal p{
+                font-size: 20px;
+            }
+            .nosotros-principal h1{
+                font-size: 40px;
+            }
+            .nosotros{
+                font-size: 15px;
+            }
+            .nosotros h2{
+                font-size: 25px;
+            }
         }
 @media all and ( max-width: 762px){
     .articulos{
-        flex-direction: column;
-        
+        flex-direction: column;  
     }
-}
+    aside{
+        flex-direction: column;
+    }
 @media all and (max-width: 652px) {
     .off{
         display: none;
     }    
-    .nav a{   font-size: 25px;}
+    .nav a{   font-size: 20px;}
+    .nosotros-principal h1{
+        font-size: 30px;
+    }
+   .article img{
+       width: 85%;
+   }
 }
-@media all and (max-width:400px){
-    .aside{
-        flex-direction: column;
+@media all and (max-width: 477px){
+    .nosotros-principal p{
+        font-size: 18px;
+    }
+    .nosotros-principal h1{
+        font-size: 25px;
+    }
+    .nosotros{
+        font-size: 15px;
+    }
+    .nosotros h2{
+        font-size: 20px;
+    }
+}
+@media all and (max-width:415px){
+    .nosotros-principal h1{
+        font-size: 20px;
     }
 
+@media all and (max-width:400px){
+    .aside{
+        flex-direction: column;}
 }
+
+
+
     
         
